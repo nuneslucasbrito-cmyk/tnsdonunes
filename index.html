@@ -11,15 +11,15 @@
 body {
     margin: 0;
     font-family: 'Montserrat', Arial, sans-serif;
-    background: #000;
+    background: #050505;
     color: #fff;
 }
 
 /* ===== BANNER ===== */
 .banner {
-    min-height: 85vh;
+    min-height: 90vh;
     background:
-        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+        linear-gradient(135deg, rgba(255,0,150,0.45), rgba(0,180,255,0.45)),
         url('banner.jpg');
     background-size: cover;
     background-position: center;
@@ -27,56 +27,56 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 40px 20px;
+}
+
+.banner-content {
+    background: rgba(0,0,0,0.55);
+    padding: 50px 30px;
+    border-radius: 22px;
+    box-shadow: 0 0 60px rgba(0,200,255,0.4);
 }
 
 .banner img {
     width: 180px;
     margin-bottom: 20px;
-    filter: drop-shadow(0 0 15px rgba(0,255,153,0.5));
 }
 
 .banner h1 {
     font-size: 3em;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
 }
 
 .banner p {
-    color: #ddd;
-    margin: 15px 0 30px;
-    font-size: 1.1em;
+    color: #e0e0e0;
+    margin-bottom: 30px;
 }
 
 .banner a {
     padding: 16px 40px;
-    background: linear-gradient(135deg, #25d366, #1ebe5d);
+    background: linear-gradient(135deg, #ff2ea6, #00d4ff);
     color: #000;
     font-weight: 700;
     border-radius: 14px;
     text-decoration: none;
-    box-shadow: 0 15px 35px rgba(37,211,102,0.6);
-    transition: transform 0.2s ease;
-}
-
-.banner a:hover {
-    transform: scale(1.08);
+    box-shadow: 0 0 30px rgba(255,46,166,0.7);
 }
 
 /* ===== PRODUTOS ===== */
 .produtos {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
-    padding: 60px 20px;
-    max-width: 1100px;
-    margin: auto;
 }
 
 .produto {
-    background: linear-gradient(180deg, #1a1a1a, #111);
+    background: linear-gradient(180deg, #121212, #0a0a0a);
     padding: 22px;
     border-radius: 18px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
     border: 1px solid #222;
     text-align: center;
 
@@ -102,7 +102,7 @@ body {
 }
 
 .preco {
-    color: #00ff99;
+    color: #00f0ff;
     font-size: 1.5em;
     font-weight: 700;
     margin-bottom: 15px;
@@ -111,16 +111,17 @@ body {
 .comprar {
     display: inline-block;
     padding: 12px 24px;
-    background: #25d366;
+    background: linear-gradient(135deg, #25d366, #00ff99);
     color: #000;
     font-weight: 700;
     border-radius: 10px;
     text-decoration: none;
 }
 
+/* ===== FOOTER ===== */
 footer {
     text-align: center;
-    color: #999;
+    color: #aaa;
     font-size: 0.9em;
     padding: 30px 0 20px;
 }
@@ -131,12 +132,12 @@ footer {
 
 <!-- BANNER -->
 <section class="banner">
-    <div>
+    <div class="banner-content">
         <img src="logotns.jpg" alt="TNS DO NUNES">
         <h1>TNS DO NUNES</h1>
-        <p>Os tênis mais brabos da Nike • Estilo e originalidade</p>
+        <p>Nike TN • Air Max • Estilo de Rua</p>
         <a href="https://wa.me/5519978083320" target="_blank">
-            💬 Comprar pelo WhatsApp
+            Comprar pelo WhatsApp
         </a>
     </div>
 </section>
@@ -165,7 +166,7 @@ footer {
 </section>
 
 <footer>
-© 2026 TNS DO NUNES
+© 2026 TNS DO NUNES • Pedidos via WhatsApp
 </footer>
 
 <script>
