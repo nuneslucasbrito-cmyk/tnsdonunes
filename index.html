@@ -11,28 +11,23 @@
 body {
     margin: 0;
     font-family: 'Montserrat', Arial, sans-serif;
-    background: linear-gradient(180deg, #0f0f0f, #000);
+    background: #000;
     color: #fff;
-    text-align: center;
 }
 
 /* ===== BANNER ===== */
 .banner {
-    min-height: 75vh;
-    background: linear-gradient(
-        135deg,
-        rgba(0,0,0,0.85),
-        rgba(0,0,0,0.6)
-    ),
-    radial-gradient(circle at top, #00ff99, transparent 60%);
+    min-height: 80vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)),
+        url('airforce1.jpg');
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     padding: 40px 20px;
-}
-
-.banner-content {
-    max-width: 900px;
 }
 
 .banner img {
@@ -42,19 +37,17 @@ body {
 }
 
 .banner h1 {
-    font-size: 2.8em;
+    font-size: 3em;
     letter-spacing: 4px;
-    margin-bottom: 10px;
 }
 
 .banner p {
-    color: #dcdcdc;
+    color: #ddd;
+    margin: 15px 0 30px;
     font-size: 1.1em;
-    margin-bottom: 25px;
 }
 
 .banner a {
-    display: inline-block;
     padding: 16px 40px;
     background: linear-gradient(135deg, #25d366, #1ebe5d);
     color: #000;
@@ -74,7 +67,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
-    padding: 50px 20px;
+    padding: 60px 20px;
     max-width: 1100px;
     margin: auto;
 }
@@ -84,13 +77,13 @@ body {
     padding: 22px;
     border-radius: 18px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.8);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #222;
+    transition: transform 0.3s ease;
+    text-align: center;
 }
 
 .produto:hover {
     transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.9);
     border-color: #00ff99;
 }
 
@@ -109,12 +102,30 @@ body {
     color: #00ff99;
     font-size: 1.5em;
     font-weight: 700;
+    margin-bottom: 15px;
 }
 
+.comprar {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #25d366;
+    color: #000;
+    font-weight: 700;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.comprar:hover {
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
 footer {
-    margin: 30px 0 20px;
+    text-align: center;
     color: #999;
     font-size: 0.9em;
+    padding: 30px 0 20px;
 }
 </style>
 </head>
@@ -123,7 +134,7 @@ footer {
 
 <!-- BANNER -->
 <section class="banner">
-    <div class="banner-content">
+    <div>
         <img src="logotns.jpg" alt="TNS DO NUNES">
         <h1>TNS DO NUNES</h1>
         <p>Os tênis mais brabos da Nike • Estilo e originalidade</p>
@@ -134,20 +145,27 @@ footer {
 </section>
 
 <!-- PRODUTOS -->
-<div class="produtos">
+<section class="produtos">
+
     <div class="produto">
         <img src="airforce1.jpg" alt="Nike Air Force 1">
         <h2>Nike Air Force 1</h2>
         <p class="preco">R$ 499,00</p>
+        <a class="comprar" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20Air%20Force%201" target="_blank">
+            Comprar
+        </a>
     </div>
 
     <div class="produto">
         <img src="dunklow.jpg" alt="Nike Dunk Low">
         <h2>Nike Dunk Low</h2>
         <p class="preco">R$ 699,00</p>
+        <a class="comprar" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20Dunk%20Low" target="_blank">
+            Comprar
+        </a>
     </div>
-    
-</div>
+
+</section>
 
 <footer>
 © 2026 TNS DO NUNES
