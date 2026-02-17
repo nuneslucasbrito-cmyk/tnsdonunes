@@ -8,6 +8,8 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
+* { box-sizing: border-box; }
+
 body {
     margin: 0;
     font-family: 'Montserrat', Arial, sans-serif;
@@ -15,9 +17,36 @@ body {
     color: #fff;
 }
 
+/* ===== MENU FIXO ===== */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 25px;
+    z-index: 999;
+}
+
+header img {
+    height: 40px;
+}
+
+header a {
+    background: linear-gradient(135deg, #ff2ea6, #00d4ff);
+    color: #000;
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
 /* ===== BANNER ===== */
 .banner {
-    min-height: 90vh;
+    min-height: 100vh;
     background:
         linear-gradient(135deg, rgba(255,0,150,0.45), rgba(0,180,255,0.45)),
         url('banner.jpg');
@@ -27,62 +56,73 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    padding-top: 80px;
 }
 
-.banner-content {
-    background: rgba(0,0,0,0.55);
-    padding: 50px 30px;
-    border-radius: 22px;
-    box-shadow: 0 0 60px rgba(0,200,255,0.4);
+.banner-box {
+    background: rgba(0,0,0,0.6);
+    padding: 55px 30px;
+    border-radius: 25px;
+    box-shadow: 0 0 70px rgba(0,200,255,0.4);
 }
 
-.banner img {
-    width: 180px;
-    margin-bottom: 20px;
-}
-
-.banner h1 {
+.banner-box h1 {
     font-size: 3em;
     letter-spacing: 5px;
-    margin-bottom: 10px;
 }
 
-.banner p {
-    color: #e0e0e0;
-    margin-bottom: 30px;
+.banner-box p {
+    color: #ddd;
+    margin: 20px 0 35px;
 }
 
-.banner a {
-    padding: 16px 40px;
-    background: linear-gradient(135deg, #ff2ea6, #00d4ff);
+.banner-box a {
+    padding: 16px 45px;
+    background: linear-gradient(135deg, #25d366, #00ff99);
     color: #000;
     font-weight: 700;
     border-radius: 14px;
     text-decoration: none;
-    box-shadow: 0 0 30px rgba(255,46,166,0.7);
+}
+
+/* ===== SEÇÃO TN ===== */
+.tn-destaque {
+    padding: 80px 20px;
+    text-align: center;
+    background: radial-gradient(circle, #0d0d0d, #000);
+}
+
+.tn-destaque h2 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    color: #ff2ea6;
+}
+
+.tn-destaque p {
+    color: #bbb;
+    max-width: 600px;
+    margin: auto;
 }
 
 /* ===== PRODUTOS ===== */
 .produtos {
     max-width: 1100px;
     margin: auto;
-    padding: 70px 20px;
+    padding: 60px 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
 }
 
 .produto {
-    background: linear-gradient(180deg, #121212, #0a0a0a);
+    background: linear-gradient(180deg, #121212, #090909);
     padding: 22px;
-    border-radius: 18px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+    border-radius: 20px;
     border: 1px solid #222;
     text-align: center;
-
     opacity: 0;
     transform: translateY(40px);
-    transition: all 0.6s ease;
+    transition: 0.6s ease;
 }
 
 .produto.show {
@@ -93,24 +133,22 @@ body {
 .produto img {
     width: 100%;
     border-radius: 14px;
-    margin-bottom: 15px;
 }
 
-.produto h2 {
-    font-size: 1.1em;
-    margin: 10px 0;
+.produto h3 {
+    margin: 15px 0 5px;
 }
 
 .preco {
     color: #00f0ff;
-    font-size: 1.5em;
+    font-size: 1.4em;
     font-weight: 700;
-    margin-bottom: 15px;
 }
 
-.comprar {
+.produto a {
     display: inline-block;
-    padding: 12px 24px;
+    margin-top: 15px;
+    padding: 12px 26px;
     background: linear-gradient(135deg, #25d366, #00ff99);
     color: #000;
     font-weight: 700;
@@ -118,69 +156,83 @@ body {
     text-decoration: none;
 }
 
+/* ===== BOTÃO WHATS ===== */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: #000;
+    font-weight: 700;
+    padding: 14px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 0 25px rgba(37,211,102,0.8);
+    z-index: 999;
+}
+
 /* ===== FOOTER ===== */
 footer {
     text-align: center;
-    color: #aaa;
+    color: #999;
+    padding: 30px 10px;
     font-size: 0.9em;
-    padding: 30px 0 20px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- BANNER -->
+<header>
+    <img src="logotns.jpg" alt="TNS DO NUNES">
+    <a href="https://wa.me/5519978083320">Comprar</a>
+</header>
+
 <section class="banner">
-    <div class="banner-content">
-        <img src="logotns.jpg" alt="TNS DO NUNES">
+    <div class="banner-box">
         <h1>TNS DO NUNES</h1>
         <p>Nike TN • Air Max • Estilo de Rua</p>
-        <a href="https://wa.me/5519978083320" target="_blank">
-            Comprar pelo WhatsApp
-        </a>
+        <a href="https://wa.me/5519978083320">Falar no WhatsApp</a>
     </div>
 </section>
 
-<!-- PRODUTOS -->
+<section class="tn-destaque">
+    <h2>Nike TN em Destaque</h2>
+    <p>Visual agressivo, conforto absurdo e presença de rua. Os TN que dominam o estilo urbano.</p>
+</section>
+
 <section class="produtos">
 
     <div class="produto">
-        <img src="airforce1.jpg" alt="Nike Air Force 1">
-        <h2>Nike Air Force 1</h2>
+        <img src="airforce1.jpg">
+        <h3>Nike Air Force 1</h3>
         <p class="preco">R$ 499,00</p>
-        <a class="comprar" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20Air%20Force%201" target="_blank">
-            Comprar
-        </a>
+        <a href="https://wa.me/5519978083320">Comprar</a>
     </div>
 
     <div class="produto">
-        <img src="dunklow.jpg" alt="Nike Dunk Low">
-        <h2>Nike Dunk Low</h2>
+        <img src="dunklow.jpg">
+        <h3>Nike Dunk Low</h3>
         <p class="preco">R$ 699,00</p>
-        <a class="comprar" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20Dunk%20Low" target="_blank">
-            Comprar
-        </a>
+        <a href="https://wa.me/5519978083320">Comprar</a>
     </div>
 
 </section>
 
 <footer>
-© 2026 TNS DO NUNES • Pedidos via WhatsApp
+© 2026 TNS DO NUNES • Todos os direitos reservados
 </footer>
 
-<script>
-const produtos = document.querySelectorAll('.produto');
+<a class="whatsapp" href="https://wa.me/5519978083320">💬 WhatsApp</a>
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
+<script>
+const itens = document.querySelectorAll('.produto');
+const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('show');
     });
 });
-
-produtos.forEach(produto => observer.observe(produto));
+itens.forEach(i => obs.observe(i));
 </script>
 
 </body>
