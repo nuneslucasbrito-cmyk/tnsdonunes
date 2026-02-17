@@ -13,16 +13,16 @@
 body {
     margin: 0;
     font-family: 'Montserrat', Arial, sans-serif;
-    background: #050505;
+    background: #070707;
     color: #fff;
 }
 
-/* ===== MENU FIXO ===== */
+/* ===== MENU ===== */
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.9);
     backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
@@ -32,14 +32,14 @@ header {
 }
 
 header img {
-    height: 40px;
+    height: 42px;
 }
 
 header a {
-    background: linear-gradient(135deg, #ff2ea6, #00d4ff);
+    background: linear-gradient(135deg, #ff2ea6, #00e0ff);
     color: #000;
-    padding: 10px 22px;
-    border-radius: 10px;
+    padding: 10px 24px;
+    border-radius: 12px;
     font-weight: 700;
     text-decoration: none;
 }
@@ -48,7 +48,7 @@ header a {
 .banner {
     min-height: 100vh;
     background:
-        linear-gradient(135deg, rgba(255,0,150,0.45), rgba(0,180,255,0.45)),
+        linear-gradient(135deg, rgba(255,0,150,0.55), rgba(0,180,255,0.55)),
         url('banner.jpg');
     background-size: cover;
     background-position: center;
@@ -56,68 +56,68 @@ header a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 90px;
 }
 
 .banner-box {
-    background: rgba(0,0,0,0.6);
-    padding: 55px 30px;
-    border-radius: 25px;
-    box-shadow: 0 0 70px rgba(0,200,255,0.4);
+    background: rgba(0,0,0,0.65);
+    padding: 60px 35px;
+    border-radius: 30px;
+    box-shadow: 0 0 80px rgba(0,200,255,0.6);
 }
 
 .banner-box h1 {
-    font-size: 3em;
-    letter-spacing: 5px;
+    font-size: 3.2em;
+    letter-spacing: 6px;
 }
 
 .banner-box p {
-    color: #ddd;
+    color: #eee;
     margin: 20px 0 35px;
 }
 
 .banner-box a {
-    padding: 16px 45px;
+    padding: 18px 50px;
     background: linear-gradient(135deg, #25d366, #00ff99);
     color: #000;
     font-weight: 700;
-    border-radius: 14px;
+    border-radius: 16px;
     text-decoration: none;
+    font-size: 1.1em;
 }
 
 /* ===== SEÇÃO TN ===== */
-.tn-destaque {
-    padding: 80px 20px;
+.tn {
+    padding: 90px 20px;
     text-align: center;
-    background: radial-gradient(circle, #0d0d0d, #000);
+    background: radial-gradient(circle, #111, #000);
 }
 
-.tn-destaque h2 {
-    font-size: 2.2em;
-    margin-bottom: 15px;
+.tn h2 {
+    font-size: 2.4em;
     color: #ff2ea6;
 }
 
-.tn-destaque p {
-    color: #bbb;
-    max-width: 600px;
-    margin: auto;
+.tn p {
+    max-width: 650px;
+    margin: 15px auto 0;
+    color: #ccc;
 }
 
 /* ===== PRODUTOS ===== */
 .produtos {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: auto;
-    padding: 60px 20px;
+    padding: 70px 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
 }
 
 .produto {
-    background: linear-gradient(180deg, #121212, #090909);
+    background: linear-gradient(180deg, #151515, #0b0b0b);
     padding: 22px;
-    border-radius: 20px;
+    border-radius: 22px;
     border: 1px solid #222;
     text-align: center;
     opacity: 0;
@@ -139,24 +139,43 @@ header a {
     margin: 15px 0 5px;
 }
 
+.preco-antigo {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 0.95em;
+}
+
 .preco {
-    color: #00f0ff;
-    font-size: 1.4em;
+    color: #00e0ff;
+    font-size: 1.5em;
     font-weight: 700;
 }
 
 .produto a {
     display: inline-block;
     margin-top: 15px;
-    padding: 12px 26px;
+    padding: 13px 28px;
     background: linear-gradient(135deg, #25d366, #00ff99);
     color: #000;
     font-weight: 700;
-    border-radius: 10px;
+    border-radius: 12px;
     text-decoration: none;
 }
 
-/* ===== BOTÃO WHATS ===== */
+/* ===== INSTAGRAM ===== */
+.instagram {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.instagram a {
+    color: #ff2ea6;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+/* ===== WHATS ===== */
 .whatsapp {
     position: fixed;
     bottom: 20px;
@@ -164,17 +183,17 @@ header a {
     background: #25d366;
     color: #000;
     font-weight: 700;
-    padding: 14px 22px;
+    padding: 14px 24px;
     border-radius: 50px;
     text-decoration: none;
-    box-shadow: 0 0 25px rgba(37,211,102,0.8);
+    box-shadow: 0 0 30px rgba(37,211,102,0.9);
     z-index: 999;
 }
 
 /* ===== FOOTER ===== */
 footer {
     text-align: center;
-    color: #999;
+    color: #aaa;
     padding: 30px 10px;
     font-size: 0.9em;
 }
@@ -192,31 +211,37 @@ footer {
     <div class="banner-box">
         <h1>TNS DO NUNES</h1>
         <p>Nike TN • Air Max • Estilo de Rua</p>
-        <a href="https://wa.me/5519978083320">Falar no WhatsApp</a>
+        <a href="https://wa.me/5519978083320">Comprar Agora</a>
     </div>
 </section>
 
-<section class="tn-destaque">
-    <h2>Nike TN em Destaque</h2>
-    <p>Visual agressivo, conforto absurdo e presença de rua. Os TN que dominam o estilo urbano.</p>
+<section class="tn">
+    <h2>Nike TN Exclusivo</h2>
+    <p>Os modelos mais procurados do street. Presença, conforto e atitude.</p>
 </section>
 
 <section class="produtos">
 
     <div class="produto">
         <img src="airforce1.jpg">
-        <h3>Nike Air Force 1</h3>
-        <p class="preco">R$ 499,00</p>
-        <a href="https://wa.me/5519978083320">Comprar</a>
+        <h3>Nike TN Azul & Rosa Neon</h3>
+        <p class="preco-antigo">R$ 799,00</p>
+        <p class="preco">R$ 699,00</p>
+        <a href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20TN%20Azul%20e%20Rosa%20Neon">Comprar</a>
     </div>
 
     <div class="produto">
         <img src="dunklow.jpg">
         <h3>Nike Dunk Low</h3>
+        <p class="preco-antigo">R$ 799,00</p>
         <p class="preco">R$ 699,00</p>
-        <a href="https://wa.me/5519978083320">Comprar</a>
+        <a href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20Dunk%20Low">Comprar</a>
     </div>
 
+</section>
+
+<section class="instagram">
+📸 <a href="https://instagram.com/" target="_blank">@tnsdonunes</a>
 </section>
 
 <footer>
