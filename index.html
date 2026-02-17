@@ -1,32 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>TNS DO NUNES</title>
 
-Go to file
-t
-Name		
-nuneslucasbrito-cmyk
-nuneslucasbrito-cmyk
-Add files via upload
-2eba6cb
- · 
-13 minutes ago
-README.md
-Convert README.md to HTML format
-yesterday
-airforce1.jpg
-Rename Captura de tela 2026-02-17 141949.png to airforce1.jpg
-4 hours ago
-banner.jpg
-Add files via upload
-1 hour ago
-dunklow.jpg
-Add files via upload
-4 hours ago
-images
-Create images
-yesterday
-index.html
-Update index.html
-1 hour ago
-logotns.jpg
-Add files via upload
-3 hours ago
-tn.jpg
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #ff0080, #00cfff);
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    max-width: 140px;
+}
+
+header h1 {
+    margin: 10px 0 0;
+    letter-spacing: 3px;
+}
+
+/* BANNER */
+.banner {
+    background: url("banner.jpg") center/cover no-repeat;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner h2 {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 2em;
+}
+
+/* SEÇÕES */
+section {
+    padding: 40px 10px;
+}
+
+section h2 {
+    text-align: center;
+    color: #00ffcc;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+/* PRODUTOS */
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.produto {
+    background: #111;
+    border-radius: 15px;
+    padding: 20px;
+    width: 260px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,255,200,0.2);
+}
+
+.produto img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.produto h3 {
+    margin: 15px 0 5px;
+}
+
+.preco {
+    color: #00ff99;
+    font-size: 1.3em;
+    margin: 10px 0;
+}
+
+.botao {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff0080, #00cfff);
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: #fff;
+    padding: 15px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="logotns.jpg" alt="TNS do Nunes">
+    <h1>TNS DO NUNES</h1>
+    <p>Só tênis • Original Style</p>
+</header>
+
+<div class="banner">
+    <h2>🔥 Nike TN Azul & Rosa Neon 🔥</h2>
+</div>
+
+<!-- NIKE TN -->
+<section>
+<h2>NIKE TN</h2>
+<div class="produtos">
+
+<div class="produto">
+<img src="tn.jpg" alt="Nike TN Azul e Rosa Neon">
+<h3>Nike TN Neon</h3>
+<p class="preco">R$ 699,00</p>
+<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20TN%20Neon">Comprar</a>
+</div>
+
+</div>
+</section>
+
+<!-- AIR FORCE -->
+<section>
+<h2>AIR FORCE 1</h2>
+<div class="produtos">
+
+<div class="produto">
+<img src="airforce1.jpg" alt="Air Force 1">
+<h3>Nike Air Force 1</h3>
+<p class="preco">R$ 499,00</p>
+<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Air%20Force%201">Comprar</a>
+</div>
+
+</div>
+</section>
+
+<!-- DUNK -->
+<section>
+<h2>NIKE DUNK</h2>
+<div class="produtos">
+
+<div class="produto">
+<img src="dunklow.jpg" alt="Nike Dunk Low">
+<h3>Nike Dunk Low</h3>
+<p class="preco">R$ 699,00</p>
+<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20Dunk%20Low">Comprar</a>
+</div>
+
+</div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/5519978083320">📱 WhatsApp</a>
+
+<footer>
+© 2026 • TNS DO NUNES • Todos os direitos reservados
+</footer>
+
+</body>
+</html>
