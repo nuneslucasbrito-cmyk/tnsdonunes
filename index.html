@@ -16,29 +16,65 @@ body {
     text-align: center;
 }
 
-header {
-    padding: 50px 15px 40px;
-    background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
-    border-bottom: 2px solid #00ff99;
+/* ===== BANNER ===== */
+.banner {
+    min-height: 75vh;
+    background: linear-gradient(
+        135deg,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.6)
+    ),
+    radial-gradient(circle at top, #00ff99, transparent 60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
 }
 
-.logo-img {
-    width: 160px;
-    margin-bottom: 15px;
-    filter: drop-shadow(0 0 12px rgba(0,255,153,0.4));
+.banner-content {
+    max-width: 900px;
 }
 
-header p {
-    color: #cfcfcf;
-    margin-top: 5px;
-    font-weight: 500;
+.banner img {
+    width: 180px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 15px rgba(0,255,153,0.5));
 }
 
+.banner h1 {
+    font-size: 2.8em;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    color: #dcdcdc;
+    font-size: 1.1em;
+    margin-bottom: 25px;
+}
+
+.banner a {
+    display: inline-block;
+    padding: 16px 40px;
+    background: linear-gradient(135deg, #25d366, #1ebe5d);
+    color: #000;
+    font-weight: 700;
+    border-radius: 14px;
+    text-decoration: none;
+    box-shadow: 0 15px 35px rgba(37,211,102,0.6);
+    transition: transform 0.2s ease;
+}
+
+.banner a:hover {
+    transform: scale(1.08);
+}
+
+/* ===== PRODUTOS ===== */
 .produtos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
-    padding: 40px 20px;
+    padding: 50px 20px;
     max-width: 1100px;
     margin: auto;
 }
@@ -67,31 +103,12 @@ header p {
 .produto h2 {
     font-size: 1.1em;
     margin: 10px 0;
-    color: #fff;
 }
 
 .preco {
     color: #00ff99;
     font-size: 1.5em;
     font-weight: 700;
-}
-
-.whatsapp {
-    display: inline-block;
-    margin: 40px 0;
-    padding: 16px 36px;
-    background: linear-gradient(135deg, #25d366, #1ebe5d);
-    color: #000;
-    font-weight: 700;
-    border-radius: 12px;
-    text-decoration: none;
-    box-shadow: 0 10px 25px rgba(37,211,102,0.5);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.whatsapp:hover {
-    transform: scale(1.08);
-    box-shadow: 0 15px 35px rgba(37,211,102,0.7);
 }
 
 footer {
@@ -104,11 +121,19 @@ footer {
 
 <body>
 
-<header>
-    <img src="logotns.jpg" alt="TNS DO NUNES" class="logo-img">
-    <p>Só tênis • Nike</p>
-</header>
+<!-- BANNER -->
+<section class="banner">
+    <div class="banner-content">
+        <img src="logotns.jpg" alt="TNS DO NUNES">
+        <h1>TNS DO NUNES</h1>
+        <p>Os tênis mais brabos da Nike • Estilo e originalidade</p>
+        <a href="https://wa.me/5519978083320" target="_blank">
+            💬 Comprar pelo WhatsApp
+        </a>
+    </div>
+</section>
 
+<!-- PRODUTOS -->
 <div class="produtos">
     <div class="produto">
         <img src="airforce1.jpg" alt="Nike Air Force 1">
@@ -121,11 +146,8 @@ footer {
         <h2>Nike Dunk Low</h2>
         <p class="preco">R$ 699,00</p>
     </div>
+    
 </div>
-
-<a class="whatsapp" href="https://wa.me/5519978083320" target="_blank">
-💬 Pedidos via WhatsApp
-</a>
 
 <footer>
 © 2026 TNS DO NUNES
