@@ -1,109 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TNS DO NUNES</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #000;
-            color: #fff;
-            text-align: center;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TNS DO NUNES</title>
 
-        header {
-            padding: 30px 10px;
-            background-color: #111;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
 
-        h1 {
-            font-size: 2.2em;
-            letter-spacing: 2px;
-            margin: 0;
-        }
+header {
+    padding: 30px 10px;
+    background: #111;
+}
 
-        .produtos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            padding: 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+h1 {
+    font-size: 2.2em;
+    letter-spacing: 2px;
+}
 
-        .produto {
-            background: #111;
-            padding: 20px;
-            border-radius: 12px;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
 
-        .produto:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 255, 153, 0.5);
-        }
+.produto {
+    background: #111;
+    padding: 20px;
+    border-radius: 12px;
+}
 
-        .produto img {
-            width: 100%;
-            border-radius: 12px;
-        }
+.produto img {
+    width: 100%;
+    border-radius: 12px;
+}
 
-        .preco {
-            color: #00ff99;
-            font-size: 1.3em;
-            margin-top: 10px;
-        }
+.preco {
+    color: #00ff99;
+    font-size: 1.3em;
+    margin-top: 10px;
+}
 
-        footer {
-            margin: 30px 0;
-            font-size: 0.9em;
-            color: #aaa;
-        }
+.whatsapp {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 12px 25px;
+    background: #25d366;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+}
 
-        .whatsapp {
-            margin-top: 15px;
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #25d366;
-            color: #fff;
-            font-weight: bold;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .whatsapp:hover {
-            background-color: #1ebe57;
-        }
-    </style>
+footer {
+    margin: 30px 0;
+    color: #aaa;
+}
+</style>
 </head>
+
 <body>
 
 <header>
     <h1>TNS DO NUNES</h1>
     <p>Só tênis • Nike</p>
-    <!-- Sua imagem adicionada aqui -->
-    <img src="images/airforce1.jpg" alt="Nike Air Force 1" style="max-width:400px; margin-top:20px; border-radius:12px;">
 </header>
 
-<main>
-    <div class="produtos">
-        <div class="produto">
-            <h2>Nike Air Force 1</h2>
-            <p class="preco">R$ 499,00</p>
-        </div>
-        <div class="produto">
-            <h2>Nike Dunk Low</h2>
-            <p class="preco">R$ 699,00</p>
-        </div>
+<div class="produtos">
+    <div class="produto">
+        <img src="airforce1.jpg" alt="Nike Air Force 1">
+        <h2>Nike Air Force 1</h2>
+        <p class="preco">R$ 499,00</p>
     </div>
 
-    <a class="whatsapp" href="https://wa.me/5519978083320" target="_blank">Pedidos via WhatsApp 📱</a>
-</main>
+    <div class="produto">
+        <img src="dunklow.jpg" alt="Nike Dunk Low">
+        <h2>Nike Dunk Low</h2>
+        <p class="preco">R$ 699,00</p>
+    </div>
+</div>
+
+<a class="whatsapp" href="https://wa.me/5519978083320" target="_blank">
+Pedidos via WhatsApp 📱
+</a>
 
 <footer>
-    © 2026 TNS DO NUNES
+© 2026 TNS DO NUNES
 </footer>
 
 </body>
