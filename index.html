@@ -13,7 +13,7 @@
 body {
     margin: 0;
     font-family: 'Montserrat', Arial, sans-serif;
-    background: #070707;
+    background: #080808;
     color: #fff;
 }
 
@@ -31,9 +31,7 @@ header {
     z-index: 999;
 }
 
-header img {
-    height: 42px;
-}
+header img { height: 42px; }
 
 header a {
     background: linear-gradient(135deg, #ff2ea6, #00e0ff);
@@ -48,7 +46,7 @@ header a {
 .banner {
     min-height: 100vh;
     background:
-        linear-gradient(135deg, rgba(255,0,150,0.55), rgba(0,180,255,0.55)),
+        linear-gradient(135deg, rgba(255,0,150,0.6), rgba(0,180,255,0.6)),
         url('banner.jpg');
     background-size: cover;
     background-position: center;
@@ -72,8 +70,8 @@ header a {
 }
 
 .banner-box p {
-    color: #eee;
     margin: 20px 0 35px;
+    color: #eee;
 }
 
 .banner-box a {
@@ -83,32 +81,23 @@ header a {
     font-weight: 700;
     border-radius: 16px;
     text-decoration: none;
-    font-size: 1.1em;
 }
 
-/* ===== SEÇÃO TN ===== */
-.tn {
-    padding: 90px 20px;
+/* ===== URGÊNCIA ===== */
+.urgencia {
+    background: linear-gradient(135deg, #ff2ea6, #00e0ff);
+    color: #000;
     text-align: center;
-    background: radial-gradient(circle, #111, #000);
-}
-
-.tn h2 {
-    font-size: 2.4em;
-    color: #ff2ea6;
-}
-
-.tn p {
-    max-width: 650px;
-    margin: 15px auto 0;
-    color: #ccc;
+    padding: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 /* ===== PRODUTOS ===== */
 .produtos {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: auto;
-    padding: 70px 20px;
+    padding: 80px 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
@@ -120,14 +109,6 @@ header a {
     border-radius: 22px;
     border: 1px solid #222;
     text-align: center;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: 0.6s ease;
-}
-
-.produto.show {
-    opacity: 1;
-    transform: translateY(0);
 }
 
 .produto img {
@@ -135,9 +116,7 @@ header a {
     border-radius: 14px;
 }
 
-.produto h3 {
-    margin: 15px 0 5px;
-}
+.produto h3 { margin: 15px 0 5px; }
 
 .preco-antigo {
     text-decoration: line-through;
@@ -162,20 +141,7 @@ header a {
     text-decoration: none;
 }
 
-/* ===== INSTAGRAM ===== */
-.instagram {
-    text-align: center;
-    padding: 50px 20px;
-}
-
-.instagram a {
-    color: #ff2ea6;
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 1.1em;
-}
-
-/* ===== WHATS ===== */
+/* ===== WHATS FIXO ===== */
 .whatsapp {
     position: fixed;
     bottom: 20px;
@@ -190,12 +156,18 @@ header a {
     z-index: 999;
 }
 
-/* ===== FOOTER ===== */
-footer {
-    text-align: center;
-    color: #aaa;
-    padding: 30px 10px;
+/* ===== POPUP VENDA ===== */
+.popup {
+    position: fixed;
+    bottom: 90px;
+    left: 20px;
+    background: #111;
+    border-left: 5px solid #25d366;
+    padding: 14px 18px;
+    border-radius: 10px;
     font-size: 0.9em;
+    display: none;
+    z-index: 999;
 }
 </style>
 </head>
@@ -203,22 +175,21 @@ footer {
 <body>
 
 <header>
-    <img src="logotns.jpg" alt="TNS DO NUNES">
+    <img src="logotns.jpg">
     <a href="https://wa.me/5519978083320">Comprar</a>
 </header>
 
 <section class="banner">
     <div class="banner-box">
         <h1>TNS DO NUNES</h1>
-        <p>Nike TN • Air Max • Estilo de Rua</p>
+        <p>Nike TN • Estilo de Rua</p>
         <a href="https://wa.me/5519978083320">Comprar Agora</a>
     </div>
 </section>
 
-<section class="tn">
-    <h2>Nike TN Exclusivo</h2>
-    <p>Os modelos mais procurados do street. Presença, conforto e atitude.</p>
-</section>
+<div class="urgencia">
+🔥 Últimas unidades • Envio imediato • Promoção por tempo limitado
+</div>
 
 <section class="produtos">
 
@@ -227,7 +198,7 @@ footer {
         <h3>Nike TN Azul & Rosa Neon</h3>
         <p class="preco-antigo">R$ 799,00</p>
         <p class="preco">R$ 699,00</p>
-        <a href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20TN%20Azul%20e%20Rosa%20Neon">Comprar</a>
+        <a href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20TN%20Azul%20e%20Rosa%20Neon%20🔥">Comprar</a>
     </div>
 
     <div class="produto">
@@ -240,24 +211,18 @@ footer {
 
 </section>
 
-<section class="instagram">
-📸 <a href="https://instagram.com/" target="_blank">@tnsdonunes</a>
-</section>
-
-<footer>
-© 2026 TNS DO NUNES • Todos os direitos reservados
-</footer>
-
 <a class="whatsapp" href="https://wa.me/5519978083320">💬 WhatsApp</a>
 
+<div class="popup" id="popup">
+🔥 Alguém acabou de comprar um Nike TN
+</div>
+
 <script>
-const itens = document.querySelectorAll('.produto');
-const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('show');
-    });
-});
-itens.forEach(i => obs.observe(i));
+setInterval(() => {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'block';
+    setTimeout(() => popup.style.display = 'none', 4000);
+}, 12000);
 </script>
 
 </body>
