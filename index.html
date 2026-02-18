@@ -1,231 +1,196 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>TNS DO NUNES</title>
+  <meta charset="UTF-8">
+  <title>TNS do Nunes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #121212;
-    color: #fff;
-}
-
-/* HEADER */
-header {
-    background: linear-gradient(135deg, #ff0080, #00cfff);
-    padding: 20px;
-    text-align: center;
-}
-
-header img {
-    max-width: 140px;
-}
-
-header h1 {
-    margin: 10px 0 0;
-    letter-spacing: 3px;
-}
-
-/* BANNER */
-.banner {
-    background: url("banner.jpg") center/cover no-repeat;
-    height: 320px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.banner h2 {
-    background: rgba(0,0,0,0.6);
-    padding: 20px;
-    border-radius: 15px;
-    font-size: 2em;
-}
-
-/* SEÇÕES */
-section {
-    padding: 40px 10px;
-}
-
-section h2 {
-    text-align: center;
-    color: #00ffcc;
-    margin-bottom: 20px;
-    font-size: 1.8em;
-}
-
-/* PRODUTOS */
-.produtos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.produto {
-    background: #1c1c1c;
-    border-radius: 18px;
-    padding: 20px;
-    width: 260px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 0 18px rgba(0,255,200,0.25);
-}
-
-.produto img {
-    width: 100%;
-    border-radius: 12px;
-}
-
-.selo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #ff0080;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.75em;
-    font-weight: bold;
-}
-
-.produto h3 {
-    margin: 15px 0 5px;
-}
-
-.preco {
-    color: #00ff99;
-    font-size: 1.4em;
-    margin: 10px 0;
-}
-
-.botao {
-    display: inline-block;
-    background: linear-gradient(135deg, #ff0080, #00cfff);
-    color: #fff;
-    padding: 12px 18px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* COMO COMPRAR */
-.como-comprar {
-    max-width: 700px;
-    margin: auto;
-    background: #1a1a1a;
-    padding: 25px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-/* WHATSAPP */
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25d366;
-    color: #fff;
-    padding: 15px 18px;
-    border-radius: 50px;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 25px;
-    font-size: 0.9em;
-    color: #aaa;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-    .produtos {
-        flex-direction: column;
-        align-items: center;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
-}
-</style>
+
+    body {
+      background: #111;
+      color: #fff;
+    }
+
+    /* HEADER */
+    header {
+      background: #000;
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header img {
+      height: 45px;
+    }
+
+    header a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* BANNER */
+    .banner {
+      width: 100%;
+      height: 400px;
+      background: url("banner.jpg") center/cover no-repeat;
+    }
+
+    /* TITULOS */
+    h2 {
+      text-align: center;
+      margin: 60px 0 30px;
+      font-size: 32px;
+      letter-spacing: 2px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 0 30px 60px;
+    }
+
+    /* CARD */
+    .card {
+      position: relative;
+      height: 360px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.55);
+    }
+
+    .card-content {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .card-content img {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+
+    .card-content span {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+
+    .card-content button {
+      background: #ff7a2f;
+      border: none;
+      padding: 10px 20px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    .card-content button:hover {
+      opacity: 0.85;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <img src="logotns.jpg" alt="TNS do Nunes">
-    <h1>TNS DO NUNES</h1>
-    <p>Só tênis • Envio imediato</p>
+  <img src="logotns.jpg" alt="TNS do Nunes">
+  <a href="#">Carrinho</a>
 </header>
 
-<div class="banner">
-    <h2>🔥 Nike TN Azul & Rosa Neon 🔥</h2>
+<section class="banner"></section>
+
+<h2>COLEÇÕES</h2>
+
+<div class="grid">
+  <div class="card" style="background-image:url('tn.jpg')">
+    <div class="card-content">
+      <img src="logotns.jpg">
+      <span>NIKE TN</span>
+      <button>VER MAIS</button>
+    </div>
+  </div>
+
+  <div class="card" style="background-image:url('airforce1.jpg')">
+    <div class="card-content">
+      <img src="logotns.jpg">
+      <span>AIR FORCE 1</span>
+      <button>VER MAIS</button>
+    </div>
+  </div>
+
+  <div class="card" style="background-image:url('dunklow.jpg')">
+    <div class="card-content">
+      <img src="logotns.jpg">
+      <span>DUNK LOW</span>
+      <button>VER MAIS</button>
+    </div>
+  </div>
 </div>
 
-<!-- NIKE TN -->
-<section>
-<h2>NIKE TN</h2>
-<div class="produtos">
+<h2>MAIS PARA VOCÊ</h2>
 
-<div class="produto">
-<span class="selo">🔥 MAIS VENDIDO</span>
-<img src="tn.jpg" alt="Nike TN Azul e Rosa Neon">
-<h3>Nike TN Neon</h3>
-<p class="preco">R$ 400,00</p>
-<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20TN%20Neon%20-%20numeração">Comprar</a>
+<div class="grid">
+  <div class="card" style="background-image:url('tn.jpg')">
+    <div class="card-content">
+      <img src="logotns.jpg">
+      <span>NIKE TN NEON</span>
+      <button>VER MAIS</button>
+    </div>
+  </div>
+
+  <div class="card" style="background-image:url('airforce1.jpg')">
+    <div class="card-content">
+      <img src="logotns.jpg">
+      <span>AIR FORCE</span>
+      <button>VER MAIS</button>
+    </div>
+  </div>
+
+  <div class="card" style="background-image:url('dunklow.jpg')">
+    <div class="card-content">
+      <img src="logotns.jpg">
+      <span>DUNK</span>
+      <button>VER MAIS</button>
+    </div>
+  </div>
 </div>
-
-</div>
-</section>
-
-<!-- AIR FORCE -->
-<section>
-<h2>AIR FORCE 1</h2>
-<div class="produtos">
-
-<div class="produto">
-<span class="selo">⚠️ ÚLTIMAS</span>
-<img src="airforce1.jpg" alt="Air Force 1">
-<h3>Nike Air Force 1</h3>
-<p class="preco">R$ 499,00</p>
-<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Air%20Force%201%20-%20numeração">Comprar</a>
-</div>
-
-</div>
-</section>
-
-<!-- DUNK -->
-<section>
-<h2>NIKE DUNK</h2>
-<div class="produtos">
-
-<div class="produto">
-<img src="dunklow.jpg" alt="Nike Dunk Low">
-<h3>Nike Dunk Low</h3>
-<p class="preco">R$ 360,00</p>
-<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20Dunk%20Low%20-%20numeração">Comprar</a>
-</div>
-
-</div>
-</section>
-
-<!-- COMO COMPRAR -->
-<section>
-<h2>COMO COMPRAR</h2>
-<div class="como-comprar">
-<p>1️⃣ Escolha o modelo</p>
-<p>2️⃣ Clique em comprar</p>
-<p>3️⃣ Pague no Pix</p>
-<p>4️⃣ Envio em até 24h 🚚</p>
-</div>
-</section>
-
-<a class="whatsapp" href="https://wa.me/5519978083320">📱 WhatsApp</a>
 
 <footer>
-© 2026 • TNS DO NUNES • Todos os direitos reservados
+  © 2026 - TNS do Nunes. Todos os direitos reservados.
 </footer>
 
 </body>
