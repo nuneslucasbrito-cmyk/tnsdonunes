@@ -8,7 +8,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0a0a0a;
+    background: #121212;
     color: #fff;
 }
 
@@ -66,17 +66,29 @@ section h2 {
 }
 
 .produto {
-    background: #111;
-    border-radius: 15px;
+    background: #1c1c1c;
+    border-radius: 18px;
     padding: 20px;
     width: 260px;
     text-align: center;
-    box-shadow: 0 0 15px rgba(0,255,200,0.2);
+    position: relative;
+    box-shadow: 0 0 18px rgba(0,255,200,0.25);
 }
 
 .produto img {
     width: 100%;
     border-radius: 12px;
+}
+
+.selo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff0080;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: bold;
 }
 
 .produto h3 {
@@ -85,7 +97,7 @@ section h2 {
 
 .preco {
     color: #00ff99;
-    font-size: 1.3em;
+    font-size: 1.4em;
     margin: 10px 0;
 }
 
@@ -97,6 +109,16 @@ section h2 {
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
+}
+
+/* COMO COMPRAR */
+.como-comprar {
+    max-width: 700px;
+    margin: auto;
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
 }
 
 /* WHATSAPP */
@@ -119,6 +141,14 @@ footer {
     font-size: 0.9em;
     color: #aaa;
 }
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 </style>
 </head>
 
@@ -127,7 +157,7 @@ footer {
 <header>
     <img src="logotns.jpg" alt="TNS do Nunes">
     <h1>TNS DO NUNES</h1>
-    <p>Só tênis • Original Style</p>
+    <p>Só tênis • Envio imediato</p>
 </header>
 
 <div class="banner">
@@ -140,10 +170,11 @@ footer {
 <div class="produtos">
 
 <div class="produto">
+<span class="selo">🔥 MAIS VENDIDO</span>
 <img src="tn.jpg" alt="Nike TN Azul e Rosa Neon">
 <h3>Nike TN Neon</h3>
-<p class="preco">R$ 699,00</p>
-<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20TN%20Neon">Comprar</a>
+<p class="preco">R$ 400,00</p>
+<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20TN%20Neon%20-%20numeração">Comprar</a>
 </div>
 
 </div>
@@ -155,10 +186,11 @@ footer {
 <div class="produtos">
 
 <div class="produto">
+<span class="selo">⚠️ ÚLTIMAS</span>
 <img src="airforce1.jpg" alt="Air Force 1">
 <h3>Nike Air Force 1</h3>
 <p class="preco">R$ 499,00</p>
-<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Air%20Force%201">Comprar</a>
+<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Air%20Force%201%20-%20numeração">Comprar</a>
 </div>
 
 </div>
@@ -172,10 +204,21 @@ footer {
 <div class="produto">
 <img src="dunklow.jpg" alt="Nike Dunk Low">
 <h3>Nike Dunk Low</h3>
-<p class="preco">R$ 699,00</p>
-<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20Dunk%20Low">Comprar</a>
+<p class="preco">R$ 360,00</p>
+<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20Dunk%20Low%20-%20numeração">Comprar</a>
 </div>
 
+</div>
+</section>
+
+<!-- COMO COMPRAR -->
+<section>
+<h2>COMO COMPRAR</h2>
+<div class="como-comprar">
+<p>1️⃣ Escolha o modelo</p>
+<p>2️⃣ Clique em comprar</p>
+<p>3️⃣ Pague no Pix</p>
+<p>4️⃣ Envio em até 24h 🚚</p>
 </div>
 </section>
 
