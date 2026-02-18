@@ -4,24 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nike TN Neon | TNS do Nunes</title>
+<title>TNS do Nunes | Loja Oficial</title>
 
-<meta name="description" content="Compre Nike TN Azul e Rosa Neon com envio imediato. Pagamento via Pix e Cartão.">
-<meta name="keywords" content="Nike TN Neon, comprar Nike TN, Nike original">
+<meta name="description" content="Compre Nike TN, Air Force 1 e Dunk Low com envio imediato. Pagamento via Pix e cartão.">
+<meta name="keywords" content="Nike TN, Nike Air Force 1, Nike Dunk Low">
 <meta name="author" content="TNS do Nunes">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-background:#0f0f0f;
-color:#fff;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
+body{background:#0f0f0f;color:#fff}
 
 header{
 background:#111;
@@ -30,12 +21,10 @@ text-align:center;
 border-bottom:1px solid #222;
 }
 
-header img{
-height:60px;
-}
+header img{height:60px}
 
 .banner{
-height:420px;
+height:400px;
 background:url("banner.jpg") center/cover no-repeat;
 display:flex;
 align-items:center;
@@ -49,75 +38,76 @@ border-radius:8px;
 font-size:32px;
 }
 
-.container{
+section{padding:60px 20px}
+
+section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:28px;
+}
+
+.produtos{
 max-width:1200px;
 margin:auto;
-padding:60px 20px;
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:50px;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
 }
 
-.produto-img img{
+.produto{
+background:#1a1a1a;
+border-radius:12px;
+text-align:center;
+padding:20px;
+transition:0.3s;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.produto:hover{
+transform:translateY(-10px);
+}
+
+.produto img{
 width:100%;
+height:260px;
 object-fit:contain;
 background:#111;
-padding:30px;
-border-radius:12px;
-}
-
-.info h2{
-font-size:28px;
-margin-bottom:10px;
+padding:20px;
+border-radius:10px;
 }
 
 .estrelas{
 color:#f1c40f;
-margin-bottom:10px;
-font-size:18px;
+margin:10px 0;
 }
 
 .preco{
-font-size:30px;
+font-size:22px;
 color:#2ecc71;
 font-weight:bold;
-margin:15px 0;
+margin:10px 0;
 }
 
 .estoque{
 color:#ff4d4d;
-margin-bottom:15px;
 font-size:14px;
-}
-
-select{
-padding:12px;
-margin:15px 0;
-width:180px;
-border-radius:6px;
-border:none;
-font-size:16px;
+margin-bottom:10px;
 }
 
 .botao{
 background:linear-gradient(45deg,#ff6a00,#ff3c00);
-padding:15px 35px;
+padding:12px 28px;
 border-radius:50px;
 color:#fff;
 text-decoration:none;
 font-weight:bold;
 display:inline-block;
+margin-top:10px;
 transition:0.3s;
 }
 
 .botao:hover{
 transform:scale(1.07);
-}
-
-.beneficios{
-margin-top:20px;
-line-height:1.8;
-color:#ccc;
 }
 
 .whatsapp{
@@ -130,7 +120,6 @@ padding:15px 20px;
 border-radius:50px;
 text-decoration:none;
 font-weight:bold;
-box-shadow:0 10px 20px rgba(0,0,0,0.4);
 }
 
 footer{
@@ -139,12 +128,6 @@ padding:25px;
 text-align:center;
 color:#777;
 margin-top:60px;
-}
-
-@media(max-width:900px){
-.container{
-grid-template-columns:1fr;
-}
 }
 </style>
 </head>
@@ -156,54 +139,47 @@ grid-template-columns:1fr;
 </header>
 
 <div class="banner">
-<h1>Nike TN Azul & Rosa Neon</h1>
+<h1>🔥 Lançamentos da Semana</h1>
 </div>
 
-<section class="container">
+<section>
+<h2>Nossos Modelos</h2>
 
-<div class="produto-img">
+<div class="produtos">
+
+<!-- TN NEON -->
+<div class="produto">
 <img src="tn.jpg" alt="Nike TN Neon">
-</div>
-
-<div class="info">
-<h2>Nike TN Azul & Rosa Neon</h2>
-
+<h3>Nike TN Azul & Rosa Neon</h3>
 <div class="estrelas">★★★★★ (4.9)</div>
+<p class="preco">R$ 369,99</p>
+<p class="estoque">⚠ Restam 5 unidades</p>
+<a class="botao" href="https://mpago.la/2NjNySM">Comprar</a>
+</div>
 
-<p class="preco">R$ 699,00</p>
+<!-- AIR FORCE -->
+<div class="produto">
+<img src="airforce1.jpg" alt="Nike Air Force 1">
+<h3>Nike Air Force 1</h3>
+<div class="estrelas">★★★★☆ (4.7)</div>
+<p class="preco">R$ 499,00</p>
+<p class="estoque">⚠ Restam 3 unidades</p>
+<a class="botao" href="https://wa.me/5519978083320">Comprar</a>
+</div>
 
-<p class="estoque">⚠ Restam apenas 5 unidades em estoque</p>
-
-<label>Escolha o tamanho:</label><br>
-<select>
-<option>38</option>
-<option>39</option>
-<option>40</option>
-<option>41</option>
-<option>42</option>
-<option>43</option>
-</select>
-
-<br><br>
-
-<a class="botao" href="https://mpago.la/2NjNySM">
-Comprar Agora
-</a>
-
-<div class="beneficios">
-✔ Envio imediato<br>
-✔ Pagamento via Pix ou Cartão<br>
-✔ Produto premium<br>
-✔ Garantia de qualidade
+<!-- DUNK LOW -->
+<div class="produto">
+<img src="dunklow.jpg" alt="Nike Dunk Low">
+<div class="estrelas">★★★★★ (4.8)</div>
+<p class="preco">R$ 349,99</p>
+<p class="estoque">⚠ Restam 4 unidades</p>
+<a class="botao" href="https://wa.me/5519978083320">Comprar</a>
 </div>
 
 </div>
-
 </section>
 
-<a class="whatsapp" href="https://wa.me/5519978083320">
-WhatsApp
-</a>
+<a class="whatsapp" href="https://wa.me/5519978083320">WhatsApp</a>
 
 <footer>
 © 2026 • TNS do Nunes • Todos os direitos reservados
