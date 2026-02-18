@@ -54,11 +54,13 @@ border-radius:12px;
 padding:20px;
 text-align:center;
 box-shadow:0 10px 30px rgba(0,0,0,0.4);
+position:relative;
 transition:0.3s;
 }
 
 .produto:hover{
 transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(255,106,0,0.5);
 }
 
 .produto img{
@@ -96,11 +98,24 @@ font-weight:bold;
 display:block;
 margin-top:10px;
 text-align:center;
-transition:0.3s;
+transition:all 0.3s ease;
 }
 
 .botao:hover{
 transform:scale(1.07);
+box-shadow:0 0 15px #ff6a00;
+}
+
+.selo{
+position:absolute;
+top:12px;
+left:12px;
+background:#ff6a00;
+color:#fff;
+font-size:12px;
+padding:6px 10px;
+border-radius:4px;
+font-weight:bold;
 }
 
 .whatsapp{
@@ -142,6 +157,7 @@ margin-top:40px;
 
 <!-- TN NEON -->
 <div class="produto">
+<span class="selo">🔥 Mais Vendido</span>
 <img src="tn.jpg" alt="Nike TN Neon">
 <h3>Nike TN Azul & Rosa Neon</h3>
 <p class="preco">R$ 369,99</p>
@@ -159,6 +175,7 @@ margin-top:40px;
 
 <!-- TN 1 BLUE GRADIENT -->
 <div class="produto">
+<span class="selo">🔥 Mais Vendido</span>
 <img src="tn1-blue.jpg" alt="TN 1 Blue Gradient">
 <h3>TN 1 “Blue Gradient”</h3>
 <p class="preco">R$ 369,99</p>
