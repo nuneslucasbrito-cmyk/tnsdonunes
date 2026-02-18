@@ -2,169 +2,62 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>TNS do Nunes</title>
+<title>Nike TN Neon | TNS do Nunes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 body {
+  font-family: Arial, sans-serif;
   background: #f2f2f2;
-  color: #111;
+  margin: 0;
 }
 
-/* HEADER */
 header {
   background: #fff;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   border-bottom: 1px solid #ddd;
 }
 
 header img {
-  height: 55px;
+  height: 50px;
 }
 
-header p {
-  margin-top: 5px;
-  color: #555;
-  font-size: 14px;
-}
-
-/* BANNER */
-.banner {
-  height: 420px;
-  background: url("banner.jpg") center/cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.banner h2 {
-  background: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 20px 30px;
-  border-radius: 6px;
-  font-size: 32px;
-}
-
-/* SECTIONS */
-section {
-  padding: 50px 20px;
-}
-
-section h2 {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 35px;
-}
-
-/* GRID */
-.produtos {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-
-/* CARD */
 .produto {
+  max-width: 1000px;
+  margin: 40px auto;
   background: #fff;
-  border-radius: 6px;
-  overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-  text-align: center;
-  position: relative;
-  padding-bottom: 20px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 
 .produto img {
   width: 100%;
-  height: 260px;
-  object-fit: cover;
+  border-radius: 6px;
 }
 
-.selo {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: #ff6a00;
-  color: #fff;
-  font-size: 12px;
-  padding: 6px 10px;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.produto h3 {
-  margin: 15px 0 8px;
-  font-size: 18px;
+h1 {
+  margin-top: 0;
 }
 
 .preco {
-  font-size: 20px;
+  font-size: 28px;
   color: #27ae60;
-  margin-bottom: 12px;
+  margin: 15px 0;
   font-weight: bold;
 }
 
 .botao {
   background: #ff6a00;
   color: #fff;
-  padding: 12px 22px;
+  padding: 15px 25px;
   text-decoration: none;
-  border-radius: 4px;
   font-weight: bold;
   display: inline-block;
-}
-
-.botao:hover {
-  opacity: 0.9;
-}
-
-/* COMO COMPRAR */
-.como-comprar {
-  max-width: 700px;
-  margin: auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 6px;
-  text-align: center;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-}
-
-.como-comprar p {
-  margin: 10px 0;
-  font-size: 16px;
-}
-
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25d366;
-  color: #fff;
-  padding: 14px 18px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* FOOTER */
-footer {
-  background: #111;
-  color: #aaa;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  font-size: 14px;
+  border-radius: 4px;
+  margin-top: 20px;
 }
 </style>
 </head>
@@ -172,72 +65,26 @@ footer {
 <body>
 
 <header>
-  <img src="logotns.jpg" alt="TNS do Nunes">
-  <p>Só tênis • Envio imediato</p>
+  <img src="logotns.jpg">
 </header>
 
-<div class="banner">
-  <h2>Nike TN Azul & Rosa Neon</h2>
-</div>
-
-<section>
-<h2>NIKE TN</h2>
-<div class="produtos">
-
 <div class="produto">
-<span class="selo">MAIS VENDIDO</span>
-<img src="tn.jpg">
-<h3>Nike TN Neon</h3>
-<p class="preco">R$ 370,99</p>
-<a class="botao" href="https://wa.me/5519978083320?text=Quero%20Nike%20TN%20Neon">Comprar</a>
+  <img src="tn.jpg">
+
+  <div>
+    <h1>Nike TN Azul & Rosa Neon</h1>
+    <p>🔥 Modelo mais vendido da loja</p>
+    <p class="preco">R$ 699,00</p>
+
+    <p>
+      ✔ Envio imediato<br>
+      ✔ Produto premium<br>
+      ✔ Qualidade garantida
+    </p>
+
+    <a class="botao" href="https://wa.me/5519978083320?text=Quero%20Nike%20TN%20Neon">Comprar no WhatsApp</a>
+  </div>
 </div>
-
-</div>
-</section>
-
-<section>
-<h2>AIR FORCE 1</h2>
-<div class="produtos">
-
-<div class="produto">
-<img src="airforce1.jpg">
-<h3>Nike Air Force 1</h3>
-<p class="preco">R$ 499,00</p>
-<a class="botao" href="https://wa.me/5519978083320?text=Quero%20Air%20Force%201">Comprar</a>
-</div>
-
-</div>
-</section>
-
-<section>
-<h2>NIKE DUNK</h2>
-<div class="produtos">
-
-<div class="produto">
-<img src="dunklow.jpg">
-<h3>Nike Dunk Low</h3>
-<p class="preco">R$ 369,99</p>
-<a class="botao" href="https://wa.me/5519978083320?text=Quero%20Nike%20Dunk%20Low">Comprar</a>
-</div>
-
-</div>
-</section>
-
-<section>
-<h2>COMO COMPRAR</h2>
-<div class="como-comprar">
-<p>1️⃣ Escolha o modelo</p>
-<p>2️⃣ Clique em comprar</p>
-<p>3️⃣ Pague via Pix</p>
-<p>4️⃣ Envio rápido 🚚</p>
-</div>
-</section>
-
-<a class="whatsapp" href="https://wa.me/5519978083320">WhatsApp</a>
-
-<footer>
-© 2026 • TNS do Nunes • Todos os direitos reservados
-</footer>
 
 </body>
 </html>
