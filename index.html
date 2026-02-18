@@ -1,173 +1,231 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>TNS do Nunes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>TNS DO NUNES</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #fff;
+}
 
-    body {
-      background: #f4f4f4;
-      color: #111;
-    }
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #ff0080, #00cfff);
+    padding: 20px;
+    text-align: center;
+}
 
-    /* HEADER */
-    header {
-      background: #fff;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #ddd;
-    }
+header img {
+    max-width: 140px;
+}
 
-    header img {
-      height: 45px;
-    }
+header h1 {
+    margin: 10px 0 0;
+    letter-spacing: 3px;
+}
 
-    header a {
-      text-decoration: none;
-      color: #111;
-      font-weight: bold;
-    }
+/* BANNER */
+.banner {
+    background: url("banner.jpg") center/cover no-repeat;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
-    /* BANNER */
-    .banner {
-      width: 100%;
-      height: 420px;
-      background: url("banner.jpg") center/cover no-repeat;
-    }
+.banner h2 {
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 2em;
+}
 
-    /* TITULOS */
-    h2 {
-      text-align: center;
-      margin: 50px 0 30px;
-      font-size: 30px;
-      font-weight: bold;
-    }
+/* SEÇÕES */
+section {
+    padding: 40px 10px;
+}
 
-    /* GRID */
-    .grid {
-      max-width: 1300px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 25px;
-      padding: 0 20px 60px;
-    }
+section h2 {
+    text-align: center;
+    color: #00ffcc;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
 
-    /* CARD */
-    .card {
-      background: #fff;
-      border-radius: 6px;
-      overflow: hidden;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 20px;
-    }
+/* PRODUTOS */
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
 
-    .card img.produto {
-      width: 100%;
-      height: 260px;
-      object-fit: cover;
-    }
+.produto {
+    background: #1c1c1c;
+    border-radius: 18px;
+    padding: 20px;
+    width: 260px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 18px rgba(0,255,200,0.25);
+}
 
-    .card h3 {
-      margin: 15px 0 10px;
-      font-size: 18px;
-    }
+.produto img {
+    width: 100%;
+    border-radius: 12px;
+}
 
-    .card button {
-      background: #ff7a2f;
-      border: none;
-      padding: 12px 25px;
-      color: #fff;
-      font-weight: bold;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: 0.2s;
-    }
+.selo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #ff0080;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75em;
+    font-weight: bold;
+}
 
-    .card button:hover {
-      opacity: 0.85;
-    }
+.produto h3 {
+    margin: 15px 0 5px;
+}
 
-    /* FOOTER */
-    footer {
-      background: #111;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      margin-top: 40px;
+.preco {
+    color: #00ff99;
+    font-size: 1.4em;
+    margin: 10px 0;
+}
+
+.botao {
+    display: inline-block;
+    background: linear-gradient(135deg, #ff0080, #00cfff);
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* COMO COMPRAR */
+.como-comprar {
+    max-width: 700px;
+    margin: auto;
+    background: #1a1a1a;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: #fff;
+    padding: 15px 18px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .produtos {
+        flex-direction: column;
+        align-items: center;
     }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <img src="logotns.jpg" alt="TNS do Nunes">
-  <a href="#">Carrinho</a>
+    <img src="logotns.jpg" alt="TNS do Nunes">
+    <h1>TNS DO NUNES</h1>
+    <p>Só tênis • Envio imediato</p>
 </header>
 
-<section class="banner"></section>
-
-<h2>COLEÇÕES</h2>
-
-<div class="grid">
-  <div class="card">
-    <img src="tn.jpg" class="produto">
-    <h3>NIKE TN</h3>
-    <button>VER MAIS</button>
-  </div>
-
-  <div class="card">
-    <img src="airforce1.jpg" class="produto">
-    <h3>AIR FORCE 1</h3>
-    <button>VER MAIS</button>
-  </div>
-
-  <div class="card">
-    <img src="dunklow.jpg" class="produto">
-    <h3>DUNK LOW</h3>
-    <button>VER MAIS</button>
-  </div>
+<div class="banner">
+    <h2>🔥 Nike TN Azul & Rosa Neon 🔥</h2>
 </div>
 
-<h2>MAIS PARA VOCÊ</h2>
+<!-- NIKE TN -->
+<section>
+<h2>NIKE TN</h2>
+<div class="produtos">
 
-<div class="grid">
-  <div class="card">
-    <img src="tn.jpg" class="produto">
-    <h3>NIKE TN PREMIUM</h3>
-    <button>VER MAIS</button>
-  </div>
-
-  <div class="card">
-    <img src="airforce1.jpg" class="produto">
-    <h3>AIR FORCE STREET</h3>
-    <button>VER MAIS</button>
-  </div>
-
-  <div class="card">
-    <img src="dunklow.jpg" class="produto">
-    <h3>DUNK URBAN</h3>
-    <button>VER MAIS</button>
-  </div>
+<div class="produto">
+<span class="selo">🔥 MAIS VENDIDO</span>
+<img src="tn.jpg" alt="Nike TN Azul e Rosa Neon">
+<h3>Nike TN Neon</h3>
+<p class="preco">R$ 699,00</p>
+<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20TN%20Neon%20-%20numeração">Comprar</a>
 </div>
+
+</div>
+</section>
+
+<!-- AIR FORCE -->
+<section>
+<h2>AIR FORCE 1</h2>
+<div class="produtos">
+
+<div class="produto">
+<span class="selo">⚠️ ÚLTIMAS</span>
+<img src="airforce1.jpg" alt="Air Force 1">
+<h3>Nike Air Force 1</h3>
+<p class="preco">R$ 499,00</p>
+<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Air%20Force%201%20-%20numeração">Comprar</a>
+</div>
+
+</div>
+</section>
+
+<!-- DUNK -->
+<section>
+<h2>NIKE DUNK</h2>
+<div class="produtos">
+
+<div class="produto">
+<img src="dunklow.jpg" alt="Nike Dunk Low">
+<h3>Nike Dunk Low</h3>
+<p class="preco">R$ 699,00</p>
+<a class="botao" href="https://wa.me/5519978083320?text=Quero%20o%20Nike%20Dunk%20Low%20-%20numeração">Comprar</a>
+</div>
+
+</div>
+</section>
+
+<!-- COMO COMPRAR -->
+<section>
+<h2>COMO COMPRAR</h2>
+<div class="como-comprar">
+<p>1️⃣ Escolha o modelo</p>
+<p>2️⃣ Clique em comprar</p>
+<p>3️⃣ Pague no Pix</p>
+<p>4️⃣ Envio em até 24h 🚚</p>
+</div>
+</section>
+
+<a class="whatsapp" href="https://wa.me/5519978083320">📱 WhatsApp</a>
 
 <footer>
-  © 2026 - TNS do Nunes • Todos os direitos reservados
+© 2026 • TNS DO NUNES • Todos os direitos reservados
 </footer>
 
 </body>
