@@ -6,40 +6,41 @@
 <title>TNS do Nunes | Loja Oficial</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial}
-body{background:#0f0f0f;color:#fff}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#f4f4f4;color:#111}
 
+/* HEADER */
 header{
-background:#111;
+background:#fff;
 padding:20px;
 text-align:center;
+border-bottom:1px solid #ddd;
 }
-
 header img{height:60px}
+header p{color:#666;margin-top:5px}
 
+/* BANNER */
 .banner{
-height:400px;
+height:420px;
 background:url("banner.jpg") center/cover no-repeat;
 display:flex;
 align-items:center;
 justify-content:center;
-}
-
-.banner h1{
-background:rgba(0,0,0,0.7);
-padding:20px 40px;
-border-radius:8px;
-font-size:32px;
-}
-
-section{padding:50px 20px}
-
-section h2{
 text-align:center;
-margin-bottom:40px;
-font-size:28px;
+}
+.banner h1{
+background:rgba(0,0,0,0.65);
+color:#fff;
+padding:25px 40px;
+border-radius:12px;
+font-size:34px;
 }
 
+/* SECTIONS */
+section{padding:60px 20px}
+section h2{text-align:center;font-size:30px;margin-bottom:40px}
+
+/* GRID */
 .produtos{
 max-width:1200px;
 margin:auto;
@@ -48,63 +49,49 @@ grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:30px;
 }
 
+/* CARD */
 .produto{
-background:#1a1a1a;
-border-radius:12px;
+background:#fff;
+border-radius:14px;
 padding:20px;
 text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+box-shadow:0 10px 25px rgba(0,0,0,0.12);
 position:relative;
-transition:0.3s;
+transition:.3s;
 }
-
-.produto:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 35px rgba(255,106,0,0.5);
-}
-
+.produto:hover{transform:translateY(-6px)}
 .produto img{
 width:100%;
 height:240px;
 object-fit:contain;
-background:#111;
-padding:20px;
+background:#f7f7f7;
+padding:15px;
 border-radius:10px;
 }
-
-.preco{
-font-size:22px;
-color:#2ecc71;
-font-weight:bold;
-margin:10px 0;
-}
+.produto h3{margin-top:15px;font-size:18px}
+.preco{font-size:22px;color:#27ae60;font-weight:bold;margin:10px 0}
 
 select{
 width:100%;
 padding:10px;
-margin:8px 0;
+margin:10px 0;
 border-radius:6px;
-border:none;
-font-size:14px;
+border:1px solid #ccc;
 }
 
 .botao{
 background:linear-gradient(45deg,#ff6a00,#ff3c00);
-padding:12px;
-border-radius:50px;
+padding:14px;
+border-radius:40px;
 color:#fff;
 text-decoration:none;
 font-weight:bold;
 display:block;
 margin-top:10px;
-text-align:center;
-transition:all 0.3s ease;
+cursor:pointer;
+transition:.3s;
 }
-
-.botao:hover{
-transform:scale(1.07);
-box-shadow:0 0 15px #ff6a00;
-}
+.botao:hover{transform:scale(1.05)}
 
 .selo{
 position:absolute;
@@ -112,29 +99,48 @@ top:12px;
 left:12px;
 background:#ff6a00;
 color:#fff;
-font-size:12px;
 padding:6px 10px;
+font-size:12px;
 border-radius:4px;
 font-weight:bold;
 }
 
+/* BENEFICIOS */
+.beneficios{
+max-width:900px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+.beneficio{
+background:#fff;
+padding:25px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 8px 18px rgba(0,0,0,0.1);
+font-weight:bold;
+}
+
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 bottom:25px;
 right:25px;
 background:#25d366;
 color:#fff;
-padding:15px 20px;
+padding:15px 22px;
 border-radius:50px;
-text-decoration:none;
 font-weight:bold;
+text-decoration:none;
 }
 
+/* FOOTER */
 footer{
 background:#111;
-padding:20px;
+padding:25px;
 text-align:center;
-color:#777;
+color:#aaa;
 margin-top:40px;
 }
 </style>
@@ -143,88 +149,85 @@ margin-top:40px;
 <body>
 
 <header>
-<img src="logotns.jpg" alt="TNS do Nunes">
+<img src="logotns.jpg">
+<p>Só tênis • Envio rápido • Atendimento direto</p>
 </header>
 
 <div class="banner">
-<h1>🔥 Lançamentos da Semana</h1>
+<h1>🔥 Os tênis mais desejados do momento 🔥</h1>
 </div>
 
 <section>
-<h2>Nossos Modelos</h2>
-
+<h2>NIKE TN</h2>
 <div class="produtos">
 
-<!-- TN NEON -->
 <div class="produto">
-<span class="selo">🔥 Mais Vendido</span>
-<img src="tn.jpg" alt="Nike TN Neon">
+<span class="selo">MAIS VENDIDO</span>
+<img src="tn.jpg">
 <h3>Nike TN Azul & Rosa Neon</h3>
 <p class="preco">R$ 369,99</p>
-<label>Tamanho:</label>
-<select>
-<option>38</option>
-<option>39</option>
-<option>40</option>
-<option>41</option>
-<option>42</option>
-<option>43</option>
+<select id="tnSize">
+<option value="">Escolha o tamanho</option>
+<option>38</option><option>39</option><option>40</option>
+<option>41</option><option>42</option><option>43</option>
 </select>
-<a class="botao" href="https://mpago.la/2NjNySM">Comprar</a>
+<button class="botao" onclick="comprar('Nike TN Azul & Rosa Neon', document.getElementById('tnSize').value)">
+COMPRAR AGORA
+</button>
 </div>
 
-<!-- TN 1 BLUE GRADIENT -->
-<div class="produto">
-<span class="selo">🔥 Mais Vendido</span>
-<img src="tn1-blue.jpg" alt="TN 1 Blue Gradient">
-<h3>TN 1 “Blue Gradient”</h3>
-<p class="preco">R$ 369,99</p>
-<label>Tamanho:</label>
-<select>
-<option>38</option>
-<option>39</option>
-<option>40</option>
-<option>41</option>
-<option>42</option>
-<option>43</option>
-</select>
-<a class="botao" href="https://mpago.la/2NjNySM">Comprar</a>
 </div>
+</section>
 
-<!-- AIR FORCE 1 -->
+<section>
+<h2>AIR FORCE 1</h2>
+<div class="produtos">
+
 <div class="produto">
-<img src="airforce1.jpg" alt="Nike Air Force 1">
+<img src="airforce1.jpg">
 <h3>Nike Air Force 1</h3>
 <p class="preco">R$ 499,00</p>
-<label>Tamanho:</label>
-<select>
-<option>38</option>
-<option>39</option>
-<option>40</option>
-<option>41</option>
-<option>42</option>
-<option>43</option>
+<select id="afSize">
+<option value="">Escolha o tamanho</option>
+<option>38</option><option>39</option><option>40</option>
+<option>41</option><option>42</option><option>43</option>
 </select>
-<a class="botao" href="https://mpago.la/23eeEfW">Comprar</a>
+<button class="botao" onclick="comprar('Nike Air Force 1', document.getElementById('afSize').value)">
+COMPRAR AGORA
+</button>
 </div>
 
-<!-- DUNK LOW -->
+</div>
+</section>
+
+<section>
+<h2>NIKE DUNK</h2>
+<div class="produtos">
+
 <div class="produto">
-<img src="dunklow.jpg" alt="Nike Dunk Low">
+<img src="dunklow.jpg">
 <h3>Nike Dunk Low</h3>
 <p class="preco">R$ 349,99</p>
-<label>Tamanho:</label>
-<select>
-<option>38</option>
-<option>39</option>
-<option>40</option>
-<option>41</option>
-<option>42</option>
-<option>43</option>
+<select id="dkSize">
+<option value="">Escolha o tamanho</option>
+<option>38</option><option>39</option><option>40</option>
+<option>41</option><option>42</option><option>43</option>
 </select>
-<a class="botao" href="https://mpago.la/17nH5y9">Comprar</a>
+<button class="botao" onclick="comprar('Nike Dunk Low', document.getElementById('dkSize').value)">
+COMPRAR AGORA
+</button>
 </div>
 
+</div>
+</section>
+
+<section>
+<h2>Por que comprar com a TNS do Nunes?</h2>
+<div class="beneficios">
+<div class="beneficio">🚚 Envio rápido</div>
+<div class="beneficio">💳 Pagamento seguro</div>
+<div class="beneficio">📦 Produto bem embalado</div>
+<div class="beneficio">📱 Suporte no WhatsApp</div>
 </div>
 </section>
 
@@ -233,6 +236,17 @@ margin-top:40px;
 <footer>
 © 2026 • TNS do Nunes • Todos os direitos reservados
 </footer>
+
+<script>
+function comprar(produto, tamanho){
+if(tamanho === ""){
+alert("Escolha o tamanho antes de comprar!");
+return;
+}
+let msg = `🔥 Quero comprar!\n\nProduto: ${produto}\nTamanho: ${tamanho}\n\nPode confirmar pra mim?`;
+window.open(`https://wa.me/5519978083320?text=${encodeURIComponent(msg)}`);
+}
+</script>
 
 </body>
 </html>
